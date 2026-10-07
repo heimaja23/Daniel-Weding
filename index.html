@@ -110,6 +110,12 @@
   <script src="/_sdk/ab4336f91e694f96.resizing_sdk.js" type="text/javascript" integrity="sha512-cxmeUrBrNlwwLr+tEu/iwM5F3boeK4qDMoH3QjUPqJptkO5NkaDVhQvyIHIn+3EflI5/uubWzkSA78B1tCswgA=="></script>
  </head>
  <body data-template-id="__page-root" class="w-full page-wash" style="background: linear-gradient(rgb(255, 255, 255), rgb(255, 250, 251), rgb(249, 234, 237));">
+
+  <!-- Elemen Musik Latar Belakang -->
+  <audio id="bgm" loop preload="auto">
+   <source src="bg.mp3" type="audio/mpeg">
+  </audio>
+
   <div id="opening-screen" class="opening" aria-label="Layar pembuka undangan">
    <section class="phone-shell">
     <div class="phone-speaker" aria-hidden="true"></div>
@@ -147,12 +153,11 @@
             <img data-template-id="hero-floral-bottom" class="canva-image floral-corner floral-bottom" loading="lazy" src="bg.jpeg" alt="Beautiful arrangement of blush pink roses, perfect for weddings or romance.">
 
             <!-- 1. FOTO UTAMA MENGGUNAKAN GAYA LINGKARAN (Mengikuti struktur desain pertama) -->
-            <!-- Menambahkan kelas w-44 h-44 (180px) dan rounded-full agar berbentuk bulat sempurna -->
             <div class="relative z-10 mt-5 w-50 h-50 rounded-full overflow-hidden border-1 border-white shadow-md">
                 <img data-template-id="hero-couple-photo" class="canva-image w-full h-full object-cover" loading="lazy" src="pp" alt="A young couple enjoying a romantic beach wedding during a vibrant sunset.">
             </div>
 
-            <!-- Label Foto (Ditempatkan tepat di bawah lingkaran foto) -->
+            <!-- Label Foto -->
             <p></p>
 
             <!-- 2. TEKS SUB-JUDUL / KICKER ("Our Love Story" / "UNDANGAN PERNIKAHAN") -->
@@ -167,7 +172,6 @@
             <p data-template-id="hero-date" class="canva-text relative z-10 mt-2 font-semibold tracking-wide" style="color: rgb(169, 79, 102); font-weight: 700; font-style: normal; font-size: 16px;">QS, Az - Zariyat : 49</p>
 
             <!-- 5. PARAGRAF DESKRIPSI / TEMPAT ACARA -->
-            <!-- Menambahkan kelas text-justify dan max-w-xs agar susunan teks rapi menjuntai ke bawah -->
             <p data-template-id="hero-event-placeholder" class="canva-text relative z-10 mt-5 max-w-xs text-xs leading-6 text-justify" style="color: rgb(128, 104, 110); font-weight: 400; font-style: normal; font-size: 14px; text-align: center">"Dan segala sesuatu kami ciptakan berpasang - pasangan agar kamu mengingat (kebesaran Allah)"</p>
         </div>
     </div>
@@ -223,14 +227,14 @@
       <i data-lucide="clock-3" class="mt-1 h-5 w-5 shrink-0 text-[#a94f66]"></i>
       <div>
        <p data-template-id="event-time-label" class="canva-text text-xs font-bold uppercase tracking-widest" style="color: rgb(169, 79, 102); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.1rem;">Waktu</p>
-       <p data-template-id="event-time" class="canva-text mt-1 font-semibold" style="color: rgb(78, 58, 63); font-weight: 600; font-style: normal; font-size: 16px;">08.00 - Selesai</p>
+       <p data-template-id="event-time" class="canva-text mt-1 font-semibold" style="color: rgb(78, 58, 63); font-weight: 600; font-style: normal; font-size: 16px;">16.00 - Selesai</p>
       </div>
      </div>
      <div class="detail-row flex gap-4">
       <i data-lucide="map-pin" class="mt-1 h-5 w-5 shrink-0 text-[#a94f66]"></i>
       <div>
        <p data-template-id="event-place-label" class="canva-text text-xs font-bold uppercase tracking-widest" style="color: rgb(169, 79, 102); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.1rem;">Lokasi</p>
-       <p data-template-id="event-place" class="canva-text mt-1 font-semibold" style="color: rgb(78, 58, 63); font-weight: 600; font-style: normal; font-size: 16px;">Villa Batu</p>
+       <p data-template-id="event-place" class="canva-text mt-1 font-semibold" style="color: rgb(78, 58, 63); font-weight: 600; font-style: normal; font-size: 16px;">Villa Sejalan Batu</p>
       </div>
      </div>
      <div class="mt-6 grid gap-3 sm:grid-cols-2">
@@ -239,7 +243,7 @@
         <button id="location-button" data-template-id="location-button" type="button" class="canva-button rounded-full border px-4 py-3 font-bold"   style="background: rgb(255, 255, 255); color: rgb(135, 57, 79);"><span data-template-id="location-button-label" class="canva-text" style="color: rgb(135, 57, 79); font-weight: 700; font-style: normal; font-size: 16px;">Lihat Lokasi</span></button>
       </a>
 
-      <!-- Tombol Tambahkan ke Kalender (Tetap) -->
+      <!-- Tombol Tambahkan ke Kalender -->
       <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Daniel+%26+Pasangan&dates=20261120T030000Z/20261120T060000Z&details=Undangan+Pernikahan+Daniel+%26+Pasangan&location=Nama+Gedung+atau+Alamat+Acara"
         target="_blank">
         <button id="calendar-button" data-template-id="calendar-button" type="button" class="canva-button pink-button rounded-full px-4 py-3 font-bold" style="background: rgb(169, 79, 102); color: rgb(255, 255, 255);">
@@ -260,7 +264,7 @@
       <i data-lucide="gift" class="mx-auto h-8 w-8"></i>
       <h3 data-template-id="gift-card-title" class="canva-text serif mt-4" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 19px;">Kirim Hadiah</h3>
       <p data-template-id="digital-wallet-provider" class="canva-text mt-6 text-xs font-bold uppercase tracking-[.18em]" style="color: rgb(243, 198, 208); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.13rem;">Bank / Dompet Digital</p>
-      <p id="wallet-number" data-template-id="digital-wallet-number" class="canva-text mt-2 break-all text-xl font-semibold" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">Nomor Dompet Digital</p><button id="copy-wallet-button" data-template-id="copy-wallet-button" type="button" class="canva-button mt-6 rounded-full px-6 py-3 font-bold" style="background: rgb(255, 255, 255); color: rgb(135, 57, 79);"> <span data-template-id="copy-wallet-button-label" class="canva-text" style="color: rgb(135, 57, 79); font-weight: 700; font-style: normal; font-size: 16px;">Salin Nomor</span> </button>
+      <p id="wallet-number" data-template-id="digital-wallet-number" class="canva-text mt-2 break-all text-xl font-semibold" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">0620504858</p><button id="copy-wallet-button" data-template-id="copy-wallet-button" type="button" class="canva-button mt-6 rounded-full px-6 py-3 font-bold" style="background: rgb(255, 255, 255); color: rgb(135, 57, 79);"> <span data-template-id="copy-wallet-button-label" class="canva-text" style="color: rgb(135, 57, 79); font-weight: 700; font-style: normal; font-size: 16px;">Salin Nomor</span> </button>
       <p data-template-id="gift-note" class="canva-text mt-5 text-sm leading-6" style="color: rgb(248, 220, 226); font-weight: 400; font-style: normal; font-size: 16px;">Terima kasih atas doa dan perhatian yang diberikan.</p>
      </article>
     </div>
@@ -300,7 +304,7 @@
    </article>
   </template>
   <script>
-    const EVENT_DATETIME = "2026-11-02T00:00:00+07:00";
+    const EVENT_DATETIME = "2026-11-03T00:00:00+07:00";
     let currentWishes = [];
     let toastTimer;
 
@@ -366,9 +370,15 @@
       if (!result.isOk) showToast("Ucapan belum dapat dimuat. Silakan coba lagi.");
     }
 
+    // Pemutaran musik saat tombol Buka Undangan diklik
     document.getElementById("open-invitation").addEventListener("click", () => {
       document.getElementById("opening-screen").classList.add("is-closed");
       document.getElementById("beranda").scrollIntoView({ behavior: "smooth" });
+
+      const bgm = document.getElementById("bgm");
+      if (bgm) {
+        bgm.play().catch(error => console.log("Autoplay dicegah browser:", error));
+      }
     });
 
     document.getElementById("copy-wallet-button").addEventListener("click", async () => {
